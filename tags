@@ -1,0 +1,296 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+BassMachine	main.cc	/^        BassMachine():$/;"	f	class:BassMachine
+BassMachine	main.cc	/^class BassMachine: public Tickable$/;"	c	file:
+CarMachine	main.cc	/^        CarMachine():$/;"	f	class:CarMachine
+CarMachine	main.cc	/^class CarMachine: public Tickable$/;"	c	file:
+Channel	io.hpp	/^        Channel(): channel(stk::RtWvOut(2, stk::Stk::sampleRate(),$/;"	f	class:Channel
+Channel	io.hpp	/^class Channel$/;"	c
+CombineMultiModifiables	smallsounds.hpp	/^        CombineMultiModifiables(ModTick1& m1, ModTick2& m2):$/;"	f	class:CombineMultiModifiables
+CombineMultiModifiables	smallsounds.hpp	/^class CombineMultiModifiables: public Tickable$/;"	c
+Filtering	tickable.hpp	/^        Filtering(FilterType& f, SignalType& s): filter(f), signal(s) {}$/;"	f	class:Filtering
+Filtering	tickable.hpp	/^class Filtering: public Tickable$/;"	c
+FreakingSine	main.cc	/^        FreakingSine():$/;"	f	class:FreakingSine
+FreakingSine	main.cc	/^class FreakingSine$/;"	c	file:
+FreeBass	main.cc	/^        FreeBass():$/;"	f	class:FreeBass
+FreeBass	main.cc	/^class FreeBass$/;"	c	file:
+IO_H	io.hpp	91;"	d
+JoinedGenerators	tickable.hpp	/^        JoinedGenerators(const std::vector<Synth*>& s, MultiOp<double> j):$/;"	f	class:JoinedGenerators
+JoinedGenerators	tickable.hpp	/^class JoinedGenerators: public Tickable$/;"	c
+LFO	tickable.hpp	/^        LFO(Range rng, double freq=2,$/;"	f	class:LFO
+LFO	tickable.hpp	/^class LFO: public Tickable$/;"	c
+MixReverse	main.cc	/^        MixReverse(unsigned int st = 1):$/;"	f	class:MixReverse
+MixReverse	main.cc	/^class MixReverse$/;"	c	file:
+Modifiable	tickable.hpp	/^        Modifiable(Synth& s, sink<double> f): synth(s), modify(f) {}$/;"	f	class:Modifiable
+Modifiable	tickable.hpp	/^class Modifiable: public Tickable$/;"	c
+Modulated	tickable.hpp	/^        Modulated(Modifiable<ModSynth>& s, source<double> l):$/;"	f	class:Modulated
+Modulated	tickable.hpp	/^class Modulated: public Tickable$/;"	c
+MultiModifiable	util.hpp	/^        MultiModifiable(std::vector<Range> rs, std::vector<sink<double> > m):$/;"	f	class:MultiModifiable
+MultiModifiable	util.hpp	/^class MultiModifiable$/;"	c
+NoiseMachine	main.cc	/^        NoiseMachine():$/;"	f	class:NoiseMachine
+NoiseMachine	main.cc	/^class NoiseMachine: public Tickable$/;"	c	file:
+Organ	main.cc	/^        Organ():$/;"	f	class:Organ
+Organ	main.cc	/^class Organ: public Tickable$/;"	c	file:
+OrganConcert	main.cc	/^        OrganConcert():$/;"	f	class:OrganConcert
+OrganConcert	main.cc	/^class OrganConcert$/;"	c	file:
+Playing	main.cc	/^        Playing(double keynote, dvector ratioSequence, double frequency):$/;"	f	class:Playing
+Playing	main.cc	/^class Playing: public Tickable$/;"	c	file:
+Range	util.hpp	/^        Range(double in, double ax): min(in), max(ax) {}$/;"	f	class:Range
+Range	util.hpp	/^class Range$/;"	c
+ReverseForFun	main.cc	/^        ReverseForFun():$/;"	f	class:ReverseForFun
+ReverseForFun	main.cc	/^class ReverseForFun$/;"	c	file:
+RythmMachine	main.cc	/^        RythmMachine():$/;"	f	class:RythmMachine
+RythmMachine	main.cc	/^class RythmMachine: public Tickable$/;"	c	file:
+SMALLSOUNDS_H	smallsounds.hpp	2;"	d
+SawMachine	main.cc	/^        SawMachine():$/;"	f	class:SawMachine
+SawMachine	main.cc	/^class SawMachine: public Tickable$/;"	c	file:
+Sines	main.cc	/^        Sines():$/;"	f	class:Sines
+Sines	main.cc	/^class Sines: public Tickable$/;"	c	file:
+StateGUI	gui.py	/^class StateGUI(object):$/;"	c
+StateGUI	gui_4num.py	/^class StateGUI(Thread):$/;"	c
+TDelay	main.cc	/^        TDelay(unsigned int t, double s = 1):$/;"	f	class:TDelay
+TDelay	main.cc	/^class TDelay$/;"	c	file:
+TICKABLE_H	tickable.hpp	2;"	d
+TLift	tickable.hpp	/^        TLift(Synth s): synth(s) {}$/;"	f	class:TLift
+TLift	tickable.hpp	/^class TLift: public Tickable$/;"	c
+TSmooth	main.cc	/^        TSmooth(unsigned int s = 1): tickSum(0), steps(s) {}$/;"	f	class:TSmooth
+TSmooth	main.cc	/^class TSmooth$/;"	c	file:
+Thread	gui_4num.py	/^from threading import Thread$/;"	i
+Tickable	tickable.hpp	/^class Tickable$/;"	c
+TickableGenerator	tickable.hpp	/^        TickableGenerator(Generator& gen): generator(gen) {}$/;"	f	class:TickableGenerator
+TickableGenerator	tickable.hpp	/^class TickableGenerator: public Tickable$/;"	c
+UTIL_H	util.hpp	2;"	d
+__init__	gui.py	/^    def __init__(self, ranges):$/;"	m	class:StateGUI
+__init__	gui_4num.py	/^    def __init__(self, ranges):$/;"	m	class:StateGUI
+addFrequency	main.cc	/^        void addFrequency(double dfreq) {$/;"	f	class:Sines
+amplfo	main.cc	/^        LFO amplfo;$/;"	m	class:Organ	file:
+ampmod	main.cc	/^        LFO ampmod;$/;"	m	class:FreakingSine	file:
+ampmodlist	main.cc	/^        std::vector<Tickable*> ampmodlist;$/;"	m	class:FreakingSine	file:
+ampsines	main.cc	/^        JoinedGenerators<Tickable> ampsines;$/;"	m	class:FreakingSine	file:
+bass	main.cc	/^        BassMachine bass;$/;"	m	class:FreeBass	file:
+biq	main.cc	/^        stk::BiQuad biq;$/;"	m	class:NoiseMachine	file:
+btlfo	main.cc	/^        LFO btlfo;$/;"	m	class:SawMachine	file:
+channel	io.hpp	/^        stk::RtWvOut channel;$/;"	m	class:Channel
+chorus	main.cc	/^        stk::Chorus chorus;$/;"	m	class:RythmMachine	file:
+chorusfiltered	main.cc	/^        Filtering<stk::Chorus, Tickable> chorusfiltered;$/;"	m	class:RythmMachine	file:
+delay	main.cc	/^        TDelay delay;$/;"	m	class:FreakingSine	file:
+delay1	main.cc	/^        TDelay delay1;$/;"	m	class:Organ	file:
+delay2	main.cc	/^        TDelay delay2;$/;"	m	class:Organ	file:
+delayfiltered1	main.cc	/^        Filtering<TDelay, Tickable> delayfiltered1;$/;"	m	class:Organ	file:
+delayfiltered2	main.cc	/^        Filtering<TDelay, Tickable> delayfiltered2;$/;"	m	class:Organ	file:
+delaysteps	main.cc	/^        unsigned int delaysteps; \/\/ number of ticks;$/;"	m	class:TDelay	file:
+dfrequency	main.cc	/^        double dfrequency;$/;"	m	class:Sines	file:
+dphi	tickable.hpp	/^        double dphi;$/;"	m	class:LFO
+envelope	tickable.hpp	/^        UnaryOp<double> envelope;$/;"	m	class:LFO
+f	tickable.hpp	/^        source<double> f;$/;"	m	class:Modulated
+fDelay	main.cc	/^        Filtering<TDelay, Tickable> fDelay;$/;"	m	class:FreakingSine	file:
+fRev	main.cc	/^        Filtering<stk::JCRev, Tickable> fRev;$/;"	m	class:FreakingSine	file:
+fReverse	main.cc	/^        Filtering<MixReverse, Tickable> fReverse;$/;"	m	class:FreakingSine	file:
+fSmooth	main.cc	/^        Filtering<TSmooth, Tickable> fSmooth;$/;"	m	class:FreakingSine	file:
+filter	tickable.hpp	/^        FilterType& filter;$/;"	m	class:Filtering
+filtered	main.cc	/^        Filtering<MixReverse, BassMachine> filtered;$/;"	m	class:ReverseForFun	file:
+filtered	main.cc	/^        Filtering<stk::BiQuad, Tickable> filtered;$/;"	m	class:NoiseMachine	file:
+filtered	main.cc	/^        Filtering<stk::FreeVerb, BassMachine> filtered;$/;"	m	class:FreeBass	file:
+filtered	main.cc	/^        Filtering<stk::FreeVerb, Tickable> filtered;$/;"	m	class:RythmMachine	file:
+filtered	main.cc	/^        Filtering<stk::FreeVerb, Tickable> filtered;$/;"	m	class:SawMachine	file:
+freqlfo	main.cc	/^        LFO freqlfo;$/;"	m	class:Organ	file:
+frequencies	main.cc	/^        dvector frequencies;$/;"	m	class:Sines	file:
+frequency	main.cc	/^        double frequency;$/;"	m	class:Sines	file:
+frequency	tickable.hpp	/^        double frequency;$/;"	m	class:LFO
+func	gui.py	/^        def func(val):$/;"	f	function:StateGUI.store_value_at
+func	gui_4num.py	/^        def func(val):$/;"	f	function:StateGUI.store_value_at
+gen	main.cc	/^        stk::BlitSaw gen;$/;"	m	class:BassMachine	file:
+generator	main.cc	/^        Synth* generator() {$/;"	f	class:Playing
+generator	tickable.hpp	/^        Generator& generator;$/;"	m	class:TickableGenerator
+inputLoop	io.hpp	/^void inputLoop (Synthi& machine)$/;"	f
+instr	main.cc	/^        stk::Noise instr;$/;"	m	class:NoiseMachine	file:
+instr	main.cc	/^        stk::PercFlut instr;$/;"	m	class:CarMachine	file:
+instrlist	main.cc	/^        std::vector<Tickable*> instrlist;$/;"	m	class:BassMachine	file:
+instrlist	main.cc	/^        std::vector<Tickable*> instrlist;$/;"	m	class:CarMachine	file:
+instrlist	main.cc	/^        std::vector<Tickable*> instrlist;$/;"	m	class:NoiseMachine	file:
+instrlist	main.cc	/^        std::vector<Tickable*> instrlist;$/;"	m	class:RythmMachine	file:
+join	tickable.hpp	/^        MultiOp<double> join;$/;"	m	class:JoinedGenerators
+joined	main.cc	/^        JoinedGenerators<Tickable> joined;$/;"	m	class:BassMachine	file:
+joined	main.cc	/^        JoinedGenerators<Tickable> joined;$/;"	m	class:CarMachine	file:
+joined	main.cc	/^        JoinedGenerators<Tickable> joined;$/;"	m	class:NoiseMachine	file:
+joined	main.cc	/^        JoinedGenerators<Tickable> joined;$/;"	m	class:Organ	file:
+joined	main.cc	/^        JoinedGenerators<Tickable> joined;$/;"	m	class:OrganConcert	file:
+joined	main.cc	/^        JoinedGenerators<Tickable> joined;$/;"	m	class:RythmMachine	file:
+joined	main.cc	/^        JoinedGenerators<Tickable> joined;$/;"	m	class:SawMachine	file:
+joined	main.cc	/^        JoinedGenerators<Tickable> joined;$/;"	m	class:Sines	file:
+lfo	main.cc	/^        JoinedGenerators<LFO> lfo;$/;"	m	class:BassMachine	file:
+lfo	main.cc	/^        JoinedGenerators<LFO> lfo;$/;"	m	class:RythmMachine	file:
+lfo	main.cc	/^        std::function<void(void)> lfo = [this](){$/;"	m	class:SawMachine	file:
+lfo1	main.cc	/^        LFO lfo1;$/;"	m	class:BassMachine	file:
+lfo1	main.cc	/^        LFO lfo1;$/;"	m	class:RythmMachine	file:
+lfo2	main.cc	/^        LFO lfo2;$/;"	m	class:BassMachine	file:
+lfo2	main.cc	/^        LFO lfo2;$/;"	m	class:RythmMachine	file:
+lfo3	main.cc	/^        LFO lfo3;$/;"	m	class:BassMachine	file:
+lfo4	main.cc	/^        LFO lfo4;$/;"	m	class:BassMachine	file:
+lfoSineFourth	smallsounds.hpp	/^LFO lfoSineFourth(Range range, double frequency) {$/;"	f
+lfoSineFull	smallsounds.hpp	/^LFO lfoSineFull(Range range, double frequency) {$/;"	f
+lfoSineHalf	smallsounds.hpp	/^LFO lfoSineHalf(Range range, double frequency) {$/;"	f
+lfoTriangleFourth	smallsounds.hpp	/^LFO lfoTriangleFourth(Range range, double frequency) {$/;"	f
+lfoTriangleFull	smallsounds.hpp	/^LFO lfoTriangleFull(Range range, double frequency) {$/;"	f
+lfoTriangleHalf	smallsounds.hpp	/^LFO lfoTriangleHalf(Range range, double frequency) {$/;"	f
+lfolfo	main.cc	/^        LFO lfolfo;$/;"	m	class:SawMachine	file:
+lfolist	main.cc	/^        std::vector<LFO*> lfolist;$/;"	m	class:BassMachine	file:
+lfolist	main.cc	/^        std::vector<LFO*> lfolist;$/;"	m	class:RythmMachine	file:
+limit	util.hpp	/^        double limit (double value)$/;"	f	class:Range
+machine	main.cc	/^        BassMachine machine;$/;"	m	class:ReverseForFun	file:
+main	main.cc	/^int main(int argc, char* argv[])$/;"	f
+max	util.hpp	/^        double max;$/;"	m	class:Range
+min	util.hpp	/^        double min;$/;"	m	class:Range
+mod1	smallsounds.hpp	/^        ModTick1 mod1;$/;"	m	class:CombineMultiModifiables
+mod2	smallsounds.hpp	/^        ModTick2 mod2;$/;"	m	class:CombineMultiModifiables
+modi	main.cc	/^        Modifiable<Tickable> modi;$/;"	m	class:RythmMachine	file:
+modify	main.cc	/^        MultiModifiable modify;$/;"	m	class:BassMachine	file:
+modify	main.cc	/^        MultiModifiable modify;$/;"	m	class:CarMachine	file:
+modify	main.cc	/^        MultiModifiable modify;$/;"	m	class:FreakingSine	file:
+modify	main.cc	/^        MultiModifiable modify;$/;"	m	class:FreeBass	file:
+modify	main.cc	/^        MultiModifiable modify;$/;"	m	class:NoiseMachine	file:
+modify	main.cc	/^        MultiModifiable modify;$/;"	m	class:Organ	file:
+modify	main.cc	/^        MultiModifiable modify;$/;"	m	class:OrganConcert	file:
+modify	main.cc	/^        MultiModifiable modify;$/;"	m	class:ReverseForFun	file:
+modify	main.cc	/^        MultiModifiable modify;$/;"	m	class:RythmMachine	file:
+modify	main.cc	/^        MultiModifiable modify;$/;"	m	class:SawMachine	file:
+modify	smallsounds.hpp	/^        void modify(unsigned int n , double v) {$/;"	f	class:CombineMultiModifiables
+modify	tickable.hpp	/^        sink<double> modify;$/;"	m	class:Modifiable
+modifyRaw	util.hpp	/^        std::vector<sink<double> > modifyRaw;$/;"	m	class:MultiModifiable
+modratio	main.cc	/^        double modratio = 1;$/;"	m	class:BassMachine	file:
+modratio	main.cc	/^        double modratio = 1;$/;"	m	class:RythmMachine	file:
+modulated	main.cc	/^        Modulated<Tickable> modulated;$/;"	m	class:RythmMachine	file:
+normalize	util.hpp	/^        double normalize (double value)$/;"	f	class:Range
+notchFrequency	main.cc	/^        double notchFrequency = 100;$/;"	m	class:NoiseMachine	file:
+notchRadius	main.cc	/^        double notchRadius = 10;$/;"	m	class:NoiseMachine	file:
+operator ()	util.hpp	/^        void operator()(unsigned int n, double value)$/;"	f	class:MultiModifiable
+organ	main.cc	/^        Sines organ;$/;"	m	class:Organ	file:
+organ	main.cc	/^        Synth organ;$/;"	m	class:Playing	file:
+phase	tickable.hpp	/^        double phase;$/;"	m	class:LFO
+pi	util.hpp	/^double pi = 3.141592653589793;$/;"	v
+porg1	main.cc	/^        Playing<Sines> porg1;$/;"	m	class:OrganConcert	file:
+porg2	main.cc	/^        Playing<Sines> porg2;$/;"	m	class:OrganConcert	file:
+porg3	main.cc	/^        Playing<Sines> porg3;$/;"	m	class:OrganConcert	file:
+porg4	main.cc	/^        Playing<Sines> porg4;$/;"	m	class:OrganConcert	file:
+range	tickable.hpp	/^        Range range;$/;"	m	class:LFO
+range1	main.cc	/^        Range range1, range2, range3;$/;"	m	class:SawMachine	file:
+range2	main.cc	/^        Range range1, range2, range3;$/;"	m	class:SawMachine	file:
+range3	main.cc	/^        Range range1, range2, range3;$/;"	m	class:SawMachine	file:
+ranges	gui.py	/^    ranges = [(0, 1) for i in range(int(sys.argv[1]))]$/;"	v	class:StateGUI
+ranges	gui_4num.py	/^    ranges = [(0, 1) for i in range(int(sys.argv[1]))]$/;"	v	class:StateGUI
+ranges	util.hpp	/^        std::vector<Range> ranges;$/;"	m	class:MultiModifiable
+resonanceFrequency	main.cc	/^        double resonanceFrequency = 100;$/;"	m	class:NoiseMachine	file:
+resonanceRadius	main.cc	/^        double resonanceRadius = 10;$/;"	m	class:NoiseMachine	file:
+rev	main.cc	/^        stk::JCRev rev;$/;"	m	class:FreakingSine	file:
+reverse	main.cc	/^        MixReverse reverse;$/;"	m	class:FreakingSine	file:
+reverse	main.cc	/^        MixReverse reverse;$/;"	m	class:ReverseForFun	file:
+reverseFlag	main.cc	/^        bool reverseFlag;$/;"	m	class:MixReverse	file:
+run	gui_4num.py	/^    def run(self):$/;"	m	class:StateGUI
+sampleRate	tickable.hpp	/^        double sampleRate;$/;"	m	class:LFO
+savedSteps	main.cc	/^        std::stack<double> savedSteps;$/;"	m	class:MixReverse	file:
+savedTicks	main.cc	/^        std::queue<double> savedTicks;$/;"	m	class:TDelay	file:
+savedTicks	main.cc	/^        std::queue<double> savedTicks;$/;"	m	class:TSmooth	file:
+saw1	main.cc	/^        stk::BlitSaw saw1;$/;"	m	class:SawMachine	file:
+saw2	main.cc	/^        stk::BlitSaw saw2;$/;"	m	class:SawMachine	file:
+saw3	main.cc	/^        stk::BlitSaw saw3;$/;"	m	class:SawMachine	file:
+sawlist	main.cc	/^        std::vector<Tickable*> sawlist;$/;"	m	class:SawMachine	file:
+seq	main.cc	/^        LFO seq;$/;"	m	class:Playing	file:
+sequencable	main.cc	/^        Modifiable<Synth> sequencable;$/;"	m	class:Playing	file:
+sequence	smallsounds.hpp	/^LFO sequence(double keynote, dvector tones, double speed) {$/;"	f
+sequenced	main.cc	/^        Modulated<Synth> sequenced;$/;"	m	class:Playing	file:
+setFilter	main.cc	/^        void setFilter() {$/;"	f	class:NoiseMachine	file:
+setFrequency	main.cc	/^        void setFrequency(double freq) {$/;"	f	class:BassMachine
+setFrequency	main.cc	/^        void setFrequency(double freq) {$/;"	f	class:RythmMachine
+setFrequency	main.cc	/^        void setFrequency(double freq) {$/;"	f	class:Sines
+setFrequency	main.cc	/^        void setFrequency(double v) {$/;"	f	class:Playing
+setFrequency	tickable.hpp	/^        void setFrequency(double freq)$/;"	f	class:LFO
+setFrequency	tickable.hpp	/^        void setFrequency(double v) { synth.setFrequency(v); }$/;"	f	class:TLift
+setPhaseShift	tickable.hpp	/^        void setPhaseShift() { dphi = twopi \/ sampleRate * frequency; }$/;"	f	class:LFO
+setSteps	main.cc	/^        void setSteps(unsigned int s) { steps = s; }$/;"	f	class:MixReverse
+setSteps	main.cc	/^        void setSteps(unsigned int s) { steps = s; }$/;"	f	class:TSmooth
+setSteps	main.cc	/^        void setSteps(unsigned int t) { delaysteps = t; }$/;"	f	class:TDelay
+setStrength	main.cc	/^        void setStrength(double s) { strength = s; }$/;"	f	class:TDelay
+setTilt	main.cc	/^        void setTilt(double t) {$/;"	f	class:Sines
+shiftPhase	tickable.hpp	/^        void shiftPhase(double p)$/;"	f	class:LFO
+show	gui_4num.py	/^    def show(self):$/;"	m	class:StateGUI
+showOff	io.hpp	/^void showOff(Synth& synth)$/;"	f
+signal	tickable.hpp	/^        SignalType& signal;$/;"	m	class:Filtering
+sines	main.cc	/^        Sines sines;$/;"	m	class:FreakingSine	file:
+sines	main.cc	/^        std::vector<stk::SineWave> sines;$/;"	m	class:Sines	file:
+slider_app	gui_4num.py	/^    slider_app = StateGUI(ranges)$/;"	v	class:StateGUI
+smooth	main.cc	/^        TSmooth smooth;$/;"	m	class:BassMachine	file:
+smooth	main.cc	/^        TSmooth smooth;$/;"	m	class:FreakingSine	file:
+smooth	main.cc	/^        TSmooth smooth;$/;"	m	class:Organ	file:
+smooth	main.cc	/^        TSmooth smooth;$/;"	m	class:OrganConcert	file:
+smoothfiltered	main.cc	/^        Filtering<TSmooth, Tickable> smoothfiltered;$/;"	m	class:BassMachine	file:
+smoothfiltered	main.cc	/^        Filtering<TSmooth, Tickable> smoothfiltered;$/;"	m	class:Organ	file:
+smoothfiltered	main.cc	/^        Filtering<TSmooth, Tickable> smoothfiltered;$/;"	m	class:OrganConcert	file:
+soundLoop	io.hpp	/^void soundLoop (Synth& machine)$/;"	f
+sourceFromTickable	smallsounds.hpp	/^source<double> sourceFromTickable(Tickable& tickable) {$/;"	f
+steps	main.cc	/^        unsigned int steps;$/;"	m	class:MixReverse	file:
+steps	main.cc	/^        unsigned int steps;$/;"	m	class:TSmooth	file:
+store_value_at	gui.py	/^    def store_value_at(self, i):$/;"	m	class:StateGUI
+store_value_at	gui_4num.py	/^    def store_value_at(self, i):$/;"	m	class:StateGUI
+strength	main.cc	/^        double strength;$/;"	m	class:TDelay	file:
+stretchNormal	util.hpp	/^        double stretchNormal (double value)$/;"	f	class:Range
+synth	tickable.hpp	/^        Modifiable<ModSynth>& synth;$/;"	m	class:Modulated
+synth	tickable.hpp	/^        Synth synth;$/;"	m	class:TLift
+synth	tickable.hpp	/^        Synth& synth;$/;"	m	class:Modifiable
+synths	tickable.hpp	/^        const std::vector<Synth*>& synths;$/;"	m	class:JoinedGenerators
+sys	delayer.py	/^import sys$/;"	i
+sys	gui.py	/^    import sys$/;"	i
+sys	gui_4num.py	/^    import sys$/;"	i
+tgen	main.cc	/^        TickableGenerator<stk::BlitSaw> tgen;$/;"	m	class:BassMachine	file:
+tgen1	main.cc	/^        TLift<stk::BlitSaw> tgen1;$/;"	m	class:RythmMachine	file:
+tgen2	main.cc	/^        TLift<stk::BlitSaw> tgen2;$/;"	m	class:RythmMachine	file:
+tick	io.hpp	/^        void tick(Synth &osci) {$/;"	f	class:Channel
+tick	main.cc	/^        double tick() { return filtered.tick(); }$/;"	f	class:ReverseForFun
+tick	main.cc	/^        double tick() { return sequenced.tick(); }$/;"	f	class:Playing
+tick	main.cc	/^        double tick() {$/;"	f	class:FreakingSine
+tick	main.cc	/^        double tick() {$/;"	f	class:FreeBass
+tick	main.cc	/^        double tick() {$/;"	f	class:Organ
+tick	main.cc	/^        double tick() {$/;"	f	class:OrganConcert
+tick	main.cc	/^        double tick() {$/;"	f	class:Sines
+tick	main.cc	/^        double tick()$/;"	f	class:BassMachine
+tick	main.cc	/^        double tick()$/;"	f	class:CarMachine
+tick	main.cc	/^        double tick()$/;"	f	class:NoiseMachine
+tick	main.cc	/^        double tick()$/;"	f	class:RythmMachine
+tick	main.cc	/^        double tick()$/;"	f	class:SawMachine
+tick	main.cc	/^        double tick(double v) {$/;"	f	class:MixReverse
+tick	main.cc	/^        double tick(double v) {$/;"	f	class:TDelay
+tick	main.cc	/^        double tick(double v) {$/;"	f	class:TSmooth
+tick	smallsounds.hpp	/^        double tick() {$/;"	f	class:CombineMultiModifiables
+tick	tickable.hpp	/^        double tick() { return filter.tick(signal.tick()); }$/;"	f	class:Filtering
+tick	tickable.hpp	/^        double tick() { return synth.tick(); }$/;"	f	class:TLift
+tick	tickable.hpp	/^        double tick() {$/;"	f	class:Modifiable
+tick	tickable.hpp	/^        double tick() {$/;"	f	class:Modulated
+tick	tickable.hpp	/^        double tick()$/;"	f	class:JoinedGenerators
+tick	tickable.hpp	/^        double tick()$/;"	f	class:LFO
+tick	tickable.hpp	/^        double tick()$/;"	f	class:TickableGenerator
+tickSum	main.cc	/^        double tickSum;$/;"	m	class:TSmooth	file:
+tilt	main.cc	/^        double tilt;$/;"	m	class:Sines	file:
+time	delayer.py	/^import time$/;"	i
+tinstr	main.cc	/^        TickableGenerator<stk::Noise> tinstr;$/;"	m	class:NoiseMachine	file:
+tinstr	main.cc	/^        TickableGenerator<stk::PercFlut> tinstr;$/;"	m	class:CarMachine	file:
+tk	gui.py	/^import tkinter as tk$/;"	i
+tk	gui_4num.py	/^import tkinter as tk$/;"	i
+tsaw1	main.cc	/^        TickableGenerator<stk::BlitSaw> tsaw1;$/;"	m	class:SawMachine	file:
+tsaw2	main.cc	/^        TickableGenerator<stk::BlitSaw> tsaw2;$/;"	m	class:SawMachine	file:
+tsaw3	main.cc	/^        TickableGenerator<stk::BlitSaw> tsaw3;$/;"	m	class:SawMachine	file:
+tsine_pointers	main.cc	/^        std::vector<Tickable*> tsine_pointers;$/;"	m	class:Sines	file:
+tsines	main.cc	/^        std::vector<TLift<stk::SineWave> > tsines;$/;"	m	class:Sines	file:
+tvec	main.cc	/^        std::vector<Tickable*> tvec;$/;"	m	class:Organ	file:
+tvec	main.cc	/^        std::vector<Tickable*> tvec;$/;"	m	class:OrganConcert	file:
+twopi	util.hpp	/^double twopi = 2 * pi;$/;"	v
+updateFrequencies	main.cc	/^        void updateFrequencies() {$/;"	f	class:Sines
+updateFrequency	main.cc	/^        void updateFrequency() {$/;"	f	class:Sines
+verb	main.cc	/^        stk::FreeVerb verb;$/;"	m	class:FreakingSine	file:
+verb	main.cc	/^        stk::FreeVerb verb;$/;"	m	class:FreeBass	file:
+verb	main.cc	/^        stk::FreeVerb verb;$/;"	m	class:Organ	file:
+verb	main.cc	/^        stk::FreeVerb verb;$/;"	m	class:RythmMachine	file:
+verb	main.cc	/^        stk::FreeVerb verb;$/;"	m	class:SawMachine	file:
+verbfiltered	main.cc	/^        Filtering<stk::FreeVerb, Tickable> verbfiltered;$/;"	m	class:Organ	file:
