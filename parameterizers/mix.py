@@ -67,3 +67,20 @@ def combine_tkapps(tkapps):
     for app in apps:
         app.frame.callback = show_state
 
+
+def start_tkapps(tkapps):
+    """
+    tkapps is a list of functions, that take a master window and return a
+    Frame object. Those frames are started in different threads, with a time
+    since otherwise, memory faults occur.
+    It seems, that this is not how it is supposed to be (it's a hack!).
+    return the actual frames.
+    """
+    import time
+    res = []
+    for tkapp in tkapps:
+        app = GUIThread(tkapp)
+        app.start()
+        time.sleep(0.5)
+        res.append(app.frame)
+    return res

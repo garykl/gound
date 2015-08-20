@@ -146,3 +146,11 @@ def scrollable_canvas(master, size, callback_down, callback_up):
     canvas.bind("<Button-5>", callback_up)
     return canvas
 
+
+def canvas_with_elements(master, width, height,
+        callback_left, callback_right, callback_middle):
+    canvas = tk.Canvas(master, width=width, height=height)
+    canvas.bind("<Button-1>", callback_left)
+    canvas.bind("<Button-3>", callback_right)
+    canvas.bind("<Button-2>", callback_middle)
+    return canvas

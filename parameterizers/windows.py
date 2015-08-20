@@ -124,3 +124,61 @@ class StateGUI(tk.Frame):
     def react(self):
         self.callback()
 
+
+import cubic
+import numpy as np
+class SmoothSequencer(tk.Frame):
+
+    def __init__(self, master, width, height, num):
+
+        tk.Frame.__init__(self, master)
+        self.pack()
+        self.width = width
+        self.height = height
+
+        self.canvas = widgets.canvas_with_elements(self, width, height,
+                self.onleftclick, self.onrightclick, self.draw)
+        self.canvas.pack()
+
+        self.num = num
+        self.cuber = cubic.Cuber()
+        self.draw(None)
+
+    def normalize(self, x, y):
+        return (x / self.width, 1 - y / self.height)
+
+    def denormalize(self, x, y):
+        return (x * self.width, (1 - y) * self.height)
+
+    def onleftclick(self, event):
+        (x, y) = self.normalize(event.x, event.y)
+        self.cuber.add(x, y)
+        self.draw(event)
+
+    def onrightclick(self, event):
+        (x, y) = self.normalize(event.x, event.y)
+        num = self.cuber.remove(x, y)
+        self.draw(event)
+
+    def draw(self, event):
+        self.canvas.create_rectangle(0, 0, self.width, self.height,
+                                     fill=colors.toggle_color((0.1, 0.1, 0.1)))
+        x = self.update()
+        for (u, v) in zip(x, self.sequence):
+            (u, v) = self.denormalize(u, v)
+            self.canvas.create_oval(u - 1, v - 1, u + 1, v + 1,
+                    fill=colors.toggle_color((1, 1, 1)))
+        for (u, v) in zip(self.cuber.x, self.cuber.y):
+            (u, v) = self.denormalize(u, v)
+            self.canvas.create_oval(u - 3, v - 3, u + 3, v + 3,
+                    fill=colors.toggle_color((1, 1, 1)))
+
+    def update(self):
+        self.cuber.spline()
+        x = np.linspace(0, 1, self.num)
+        self.sequence = self.cuber(x)
+        return x
+
+    def sample(self, x):
+        i = int(x * self.num)
+        return self.sequence[i]

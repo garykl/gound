@@ -1,2 +1,7 @@
 a.out
 parameterizers/number.dat
+html
+latex
+Doxyfile
+*.swp
+__pycache__

@@ -361,6 +361,103 @@ class TSmooth
 };
 
 
+class TDelay
+{
+    private:
+        unsigned int delaysteps; // number of ticks;
+        std::queue<double> savedTicks;
+        double strength;
+
+    public:
+        TDelay(unsigned int t, double s = 1):
+            delaysteps(t), strength(s) {}
+
+        void setSteps(unsigned int t) { delaysteps = t; }
+
+        void setStrength(double s) { strength = s; }
+
+        double tick(double v) {
+            unsigned int num = savedTicks.size();
+            if (num < delaysteps) {
+                savedTicks.push(v);
+                return v;
+            }
+            else if (num == delaysteps) {
+                savedTicks.push(v);
+                double signal = strength * savedTicks.front() + v;
+                savedTicks.pop();
+                return signal;
+            }
+            else {
+                savedTicks.pop();
+                return v;
+            }
+        }
+};
+
+
+
+class MetalBass: public Tickable
+{
+    private:
+
+        double amp = 0;
+
+        stk::BlitSaw gen;
+        TickableGenerator<stk::BlitSaw> tgen;
+
+        TSmooth smooth;
+        Filtering<TSmooth, Tickable> smoothfiltered;
+
+        TDelay delay;
+        Filtering<TDelay, Tickable> delayfiltered;
+
+
+    public:
+
+        MetalBass():
+
+            tgen(TickableGenerator<stk::BlitSaw>(gen)),
+
+            smooth(20),
+            smoothfiltered(Filtering<TSmooth, Tickable>(smooth, tgen)),
+
+            delay(20),
+            delayfiltered(Filtering<TDelay, Tickable>(delay, smoothfiltered)),
+
+            modify(MultiModifiable(
+                        {Range(0, 1),
+                         Range(3, 100),
+                         Range(20, 500),
+                         Range(10, 100000),
+                         Range(0, 1)},
+                        {[this](double v) {
+                            amp = v;
+                         },
+                         [this](double v) {
+                            smooth.setSteps((unsigned int) v);
+                         },
+                         [this](double v) {
+                            gen.setFrequency(v);
+                         },
+                         [this](double v) {
+                            delay.setSteps(v);
+                         },
+                         [this](double v) {
+                            delay.setStrength(v);
+                         }}))
+        {}
+
+        MultiModifiable modify;
+
+        double tick()
+        {
+            return amp * delayfiltered.tick() * 0.15;
+        }
+};
+
+
+
 class BassMachine: public Tickable
 {
     private:
@@ -515,40 +612,6 @@ class Sines: public Tickable
         }
 };
 
-
-class TDelay
-{
-    private:
-        unsigned int delaysteps; // number of ticks;
-        std::queue<double> savedTicks;
-        double strength;
-
-    public:
-        TDelay(unsigned int t, double s = 1):
-            delaysteps(t), strength(s) {}
-
-        void setSteps(unsigned int t) { delaysteps = t; }
-
-        void setStrength(double s) { strength = s; }
-
-        double tick(double v) {
-            unsigned int num = savedTicks.size();
-            if (num < delaysteps) {
-                savedTicks.push(v);
-                return v;
-            }
-            else if (num == delaysteps) {
-                savedTicks.push(v);
-                double signal = strength * savedTicks.front() + v;
-                savedTicks.pop();
-                return signal;
-            }
-            else {
-                savedTicks.pop();
-                return v;
-            }
-        }
-};
 
 
 class Organ: public Tickable
@@ -929,6 +992,7 @@ int main(int argc, char* argv[])
     FreakingSine freakingSine;  // <- nice cracklings, yes!!
     TwoNoises noiseMachine;
     GoaSound goaSound;
+    MetalBass metalBass;
 
     CombineMultiModifiables<FreeBass, FreakingSine> freeFreakingSineBass(
             freeBass, freakingSine);
@@ -941,6 +1005,6 @@ int main(int argc, char* argv[])
     CombineMultiModifiables<FreeBass, TwoNoises> freeBassNoise(
             freeBass, noiseMachine);
 
-    showOff(noiseMachine);
+    showOff(metalBass);
     return 0;
 }
