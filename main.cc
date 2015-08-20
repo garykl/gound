@@ -28,8 +28,6 @@
 #include "Noise.h"
 #include "OnePole.h"
 
-#include <stack>
-#include <queue>
 #include <cmath>
 
 
