@@ -1,5 +1,6 @@
 import time
 import sys
+import numpy as np
 
 import windows
 import mix
@@ -21,16 +22,21 @@ if __name__ == '__main__':
     #     sys.stdout.write('\n')
     #     sys.stdout.flush()
 
+    num = int(sys.argv[1])
     apps = mix.start_tkapps(
             [lambda master: windows.SmoothSequencer(
-                master, 500, 300, 200) for i in range(5)])
+                master, 500, 100, 100) for i in range(num)])
 
-    x = 0
+    speed = np.array([0.02, 0.03, 0.01, 0.02, 0.01])
+    position = np.array([0, 0, 0, 0, 0.0])
+
     while True:
         time.sleep(0.05)
-        x = (x + 0.01) % 1
 
-        sys.stdout.write(' '.join([str(app.sample(x)) for app in apps]))
+        sys.stdout.write(' '.join([str(app.sample(x))
+            for (x, app) in zip(position, apps)]))
         sys.stdout.write('\n')
         sys.stdout.flush()
+
+        position = (position + speed) % 1
 

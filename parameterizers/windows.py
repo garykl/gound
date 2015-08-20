@@ -163,8 +163,9 @@ class SmoothSequencer(tk.Frame):
     def draw(self, event):
         self.canvas.create_rectangle(0, 0, self.width, self.height,
                                      fill=colors.toggle_color((0.1, 0.1, 0.1)))
-        x = self.update()
-        for (u, v) in zip(x, self.sequence):
+        self.update()
+        x = np.linspace(0, 1, self.num)
+        for (u, v) in zip(x, self.cuber(x)):
             (u, v) = self.denormalize(u, v)
             self.canvas.create_oval(u - 1, v - 1, u + 1, v + 1,
                     fill=colors.toggle_color((1, 1, 1)))
@@ -175,10 +176,6 @@ class SmoothSequencer(tk.Frame):
 
     def update(self):
         self.cuber.spline()
-        x = np.linspace(0, 1, self.num)
-        self.sequence = self.cuber(x)
-        return x
 
     def sample(self, x):
-        i = int(x * self.num)
-        return self.sequence[i]
+        return self.cuber(x)

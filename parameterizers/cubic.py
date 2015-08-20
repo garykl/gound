@@ -23,7 +23,9 @@ class Cuber(object):
         return len(indices)
 
     def spline(self):
-        if len(self.x) > 0:
+        if len(self.x) == 1:
+            self.func = np.vectorize(lambda x: self.y[0])
+        elif len(self.x) > 1:
             x = np.array(self.x)
             x = np.concatenate([x - 1, x, x + 1])
             y = np.concatenate([self.y, self.y, self.y])
