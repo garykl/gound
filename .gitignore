@@ -6,3 +6,4 @@ Doxyfile
 *.swp
 __pycache__
 main
+tags
