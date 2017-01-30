@@ -1,0 +1,41 @@
+* Gound
+
+  Gound is a tiny framework that allows me to quickly create sounds
+  without having to worry about technicaal details so much. The
+  purpose is to create executables that can be interacted with in the
+  simplest possible way that I can think of, which is standard
+  input.
+
+  The general idea is to create parameterized sounds. By providing a
+  small number of parameters an existing sound can be
+  modified. Continuously modifying a synthesizer allows all kinds of
+  possibilities, such as sequencing or more experimental ways of
+  producing something.
+
+
+** create a sound executable
+
+   Create a class of instance =Tickable= with a public member called
+   =modify=, which is an instance of =MultiModifiable=. Then a call to
+   =showOff= with that instance as single argument. That's it! You can
+   find examples in the =synth= folder. Using =make=, all source files in
+   the =synth= folder are being compiled and the resulting executables
+   are saved in the same folder.
+
+   When the executable is executed, it starts playing sound. The
+   executable waits for standard input, which is of the form of
+   whitespace seperated numbers. All the number are floating point
+   numbers between zero and one. What those numbers actually mean is
+   free to the programmer (it might be useful to think about
+   conventions, such that programs using such synths know what to
+   expect).
+
+** interact with synthesizers
+
+   The folder =parameterizers= contains several python scripts that can
+   be used, some of which interactively, to produce standard output,
+   that can be fed into the synthesizer executables by piping.
+
+   Another reason for me to create this little framework was to
+   sonificate simulation results from a theoretical description of a
+   swimming micro organism.
