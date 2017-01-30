@@ -22,6 +22,8 @@ if __name__ == '__main__':
     #     sys.stdout.write('\n')
     #     sys.stdout.flush()
 
+    # sys.exit()
+
     num = int(sys.argv[1])
     apps = mix.start_tkapps(
             [lambda master: windows.SmoothSequencer(
