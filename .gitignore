@@ -7,3 +7,5 @@ Doxyfile
 __pycache__
 main
 tags
+synths
+!synths.*
