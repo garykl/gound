@@ -5,18 +5,18 @@ mutliple GUI-interfaces. Therefore are GUIThread is started several times.
 import tkinter as tk
 from threading import Thread
 
-import colors
-
 
 class GUIThread(Thread):
 
-    def __init__(self, frame_thunk):
+    def __init__(self, frame_thunk, color=None):
         Thread.__init__(self)
         self.frame_thunk = frame_thunk
+        self.color = color
 
     def run(self):
         self.master = tk.Tk()
-        self.master.tk_setPalette(colors.triple_2_rgb((0, 0, 0)))
+        if self.color is not None:
+            self.master.tk_setPalette(self.color)
         self.frame = self.frame_thunk(self.master)
         self.master.mainloop()
 
