@@ -1,3 +1,7 @@
+"""
+functions in this module are supposed to provide the possibility to start
+mutliple GUI-interfaces. Therefore are GUIThread is started several times.
+"""
 import tkinter as tk
 from threading import Thread
 
