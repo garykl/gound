@@ -2,7 +2,7 @@ import time
 import sys
 import numpy as np
 
-import windows
+import goundface.windows as windows
 import goundface.launch as launch
 
 

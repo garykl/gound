@@ -1,3 +1,8 @@
+"""
+In  this module, windows are created. They are instances of type tk.Frame
+and should contain the method show. Show produces the output that is consumed
+by gound synths.
+"""
 import tkinter as tk
 
 import colors
