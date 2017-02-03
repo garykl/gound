@@ -3,10 +3,12 @@ In  this module, windows are created. They are instances of type tk.Frame
 and should contain the method show. Show produces the output that is consumed
 by gound synths.
 """
+import numpy as np
 import tkinter as tk
 
-import colors
-import widgets
+import goundface.colors as colors
+import goundface.widgets as widgets
+import goundface.cubic as cubic
 
 
 class Sequencer(tk.Frame):
@@ -130,8 +132,6 @@ class StateGUI(tk.Frame):
         self.callback()
 
 
-import cubic
-import numpy as np
 class SmoothSequencer(tk.Frame):
 
     def __init__(self, master, width, height, num):

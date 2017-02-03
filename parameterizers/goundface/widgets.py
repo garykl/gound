@@ -1,6 +1,6 @@
 import tkinter as tk
 
-import colors
+import goundface.colors as colors
 
 
 class CanvasToggler(tk.Frame):
