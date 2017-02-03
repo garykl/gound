@@ -1,5 +1,7 @@
+"""
+elements of which windows are built.
+"""
 import tkinter as tk
-
 import goundface.colors as colors
 
 

@@ -1,3 +1,9 @@
+"""
+The cuber makes a cubic spline interpolation of points. Points can be added
+and a new interpolation is performed, matching all past points and the new one.
+Points can also be removed.
+"""
+
 from scipy.interpolate import interp1d
 import numpy as np
 
